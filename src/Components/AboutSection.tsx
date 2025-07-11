@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Img from "../assets/Ganesh.png"
+import Img from "../assets/Ganesh1.png"
 import Img1 from "../assets/Shivji1.png"
 import Img2 from "../assets/templeBorder.png"
 
@@ -13,7 +13,7 @@ const AboutSection = () => {
   return (
     <div className="w-full py-16 px-4 bg-gradient-to-r from-orange-50 to-orange-100 relative overflow-hidden">
       {/* Temple skyline silhouette at bottom */}
-      <div className="absolute bottom-0 left-0 w-full pt-10">
+      <div className="absolute bottom-0 left-0 w-full ">
         <img 
           src={Img2}
           alt="Temple Silhouette" 
