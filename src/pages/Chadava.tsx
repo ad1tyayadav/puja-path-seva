@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 function Chadava() {
   return (
-    <div>Chadava</div>
+    <div>
+      <Navbar />
+      <div>Chadava</div>
+      <Footer />
+    </div>
   )
 }
 
