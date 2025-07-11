@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import LogoImg from '../assets/Logo.png';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 // --- ICONS ---
 const UserIcon = () => (
@@ -26,15 +29,15 @@ const ChevronDownIcon = () => (
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPujaDropdownOpen, setIsPujaDropdownOpen] = useState(false);
-
+  const navigate = useNavigate();
   const navLinkClasses = "text-gray-800 hover:text-orange-500 transition-colors duration-200";
   const mainNavLinks = [
     { path: "/", label: "Home" },
     { path: "/BookPuja", label: "Book Puja" },
     { path: "/LiveStreaming", label: "Live Streaming" },
     { path: "/Chadhava", label: "Chadhava" },
-    { path: "/Campaigns", label: "Campaigns" },
-    { path: "/temples", label: "Temples" },
+    { path: "/Donations", label: "Donations" },
+    { path: "/Notifications", label: "Notifications" },
   ];
   const pujaDropdownLinks = [
       { path: "/book-puja", label: "Book Puja" },
@@ -58,15 +61,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link to="/" onClick={() => navigate('/')} className="flex items-center">
               <Logo />
-            </a>
+            </Link>
           </div>
 
           {/* Main Navigation - Desktop */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {mainNavLinks.map(link => (
-              link.label === "Our Puja" ? (
+              link.label === "Book Puja" ? (
                 <div
                   key={link.path}
                   className="relative"
@@ -99,7 +102,7 @@ const Navbar = () => {
 
           {/* User actions - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="/login" className="text-orange-500 border border-orange-500 rounded-full px-5 py-2 text-sm font-medium hover:bg-orange-500 hover:text-white transition-all duration-300">
+            <a href="/Auth" className="text-orange-500 border border-orange-500 rounded-full px-5 py-2 text-sm font-medium hover:bg-orange-500 hover:text-white transition-all duration-300">
               Login/Register
             </a>
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
