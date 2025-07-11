@@ -1,14 +1,15 @@
-import Navbar from "../Components/Navbar" ;
-import Footer from "../Components/Footer" ;
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import AboutSection from "../Components/AboutSection";
 
 function Home() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col items-center justify-center h-screen">papaji</div>
+      <AboutSection />
       <Footer />
     </div>
-  )
+  );
 }
 
 export default Home;
