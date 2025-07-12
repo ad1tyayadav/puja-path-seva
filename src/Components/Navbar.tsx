@@ -38,6 +38,7 @@ const Navbar = () => {
     { path: "/Chadhava", label: "Chadhava" },
     { path: "/Donations", label: "Donations" },
     { path: "/Notifications", label: "Notifications" },
+
     
   ];
 
@@ -80,7 +81,8 @@ const Navbar = () => {
               Login/Register
             </a>
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
-              <UserIcon />
+            <a href='/Profile'><UserIcon /></a>
+              
             </div>
             <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
               <MenuIcon />
@@ -111,7 +113,7 @@ const Navbar = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="px-5 flex items-center justify-between">
-              <a href="/profile" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-gray-700">
+              <a href="/Profile" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-gray-700">
                 <div className="p-2 bg-gray-100 rounded-full">
                   <UserIcon />
                 </div>

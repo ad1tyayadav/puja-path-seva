@@ -27,8 +27,8 @@ function App() {
         <Route path="/chadhava" element={<Chadava />} />
         <Route path="/Donations" element={<Donations />} />
         <Route path="/notifications" element={<Notification />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Auth" element={<Auth />} />
 
         <Route path="/live-streaming/puja-stream" element={<LivePujaStreamPage />} />
         <Route path="/puja-details" element={<PujaDetails />} />
@@ -36,7 +36,7 @@ function App() {
         <Route path="/explore-temples" element={<ExploreTemples />} />
         <Route path="/chadhava/sankalp" element={<ChadhavaSankalp />} />
         <Route path="/chadhava/checkout" element={<ChadhavaCheckout />} />
-        <Route path="/donations/temple" element={<TempleDonation />} />
+        {/* <Route path="/donations/temple" element={<TempleDonation />} /> */}
       </Routes>
     </Router>
   );

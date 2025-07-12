@@ -68,7 +68,7 @@ function BookPuja() {
               <img 
                 src="../assets/Mandala1.png" 
                 alt="Mandala Design" 
-                className="absolute top-4 right-12 w-80 h-80 opacity-8 z-5"
+                className="absolute top-4 right-12 w-80 h-80 opacity-68 z-5"
               />
               <img 
                 src="../assets/Mandala2.png" 
