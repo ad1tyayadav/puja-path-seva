@@ -1,10 +1,10 @@
 import React from 'react';
 import { Play, MapPin } from 'lucide-react';
-import Img from "../assets/HeroPhoto.png"
+import Img from "../../public/assets/HeroPhoto.png"
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 overflow-hidden">
+    <div className="relative z-[10] min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 overflow-hidden">
       {/* Decorative background patterns */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-300 to-red-300 rounded-full blur-3xl"></div>

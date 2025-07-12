@@ -56,7 +56,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-cream-50 pt-12 overflow-hidden">
+    <footer className="relative z-10 bg-white pt-12 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 h-full">
         <div className="h-full border-l border-dashed border-orange-200 ml-8">
