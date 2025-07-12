@@ -1,12 +1,13 @@
-import React from 'react'
+
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import LiveStreamingHero from '../Components/HeroLiveStreaming'
 
 function LiveStreaming() {
   return (
     <div>
       <Navbar />
-      <div>LiveStreaming</div>
+     <LiveStreamingHero/>
       <Footer />
     </div>
   )

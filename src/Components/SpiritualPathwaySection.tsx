@@ -3,8 +3,8 @@ import Img1 from "../assets/Shivji1.png"
 
 const SpiritualPathwaysSection = () => {
   return (
-    <div className="w-full py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full py-16 px-[2px] bg-white">
+      <div>
         {/* Section Header */}
         <div className="text-center mb-12">
           <h3 className="text-orange-500 font-medium mb-2">Om Namah Shivay</h3>
@@ -28,11 +28,11 @@ const SpiritualPathwaysSection = () => {
                 </svg>
               </a>
             </div>
-            <div className="md:w-2/5 relative">
+            <div className="md:w-2/5 relative max-h-[350px] overflow-hidden">
               <img 
                 src={Img}
                 alt="Special Puja" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
 
             </div>
@@ -52,11 +52,11 @@ const SpiritualPathwaysSection = () => {
                 </svg>
               </a>
             </div>
-            <div className="relative h-48 md:h-auto">
+            <div className="relative h-48 md:h-auto max-h-[350px] overflow-hidden">
               <img 
                 src={Img1} 
                 alt="Bhairav Sadhana" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
 
             </div>
@@ -65,11 +65,11 @@ const SpiritualPathwaysSection = () => {
           {/* Row 2 */}
           {/* Kundali Consultation Card - Small (spans 5 columns) */}
           <div className="md:col-span-5 rounded-lg overflow-hidden bg-amber-50 flex flex-col">
-            <div className="relative h-48 md:h-auto">
+            <div className="relative h-48 md:h-auto max-h-[350px] overflow-hidden">
               <img 
                 src={Img1} 
                 alt="Kundali Consultation" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
     
             </div>
@@ -89,11 +89,11 @@ const SpiritualPathwaysSection = () => {
 
           {/* Charitable Activity Card - Large (spans 7 columns) */}
           <div className="md:col-span-7 rounded-lg overflow-hidden bg-amber-50 flex flex-col md:flex-row">
-            <div className="md:order-2 md:w-2/5 relative">
+            <div className="md:order-2 md:w-2/5 relative max-h-[350px] overflow-hidden">
               <img 
                 src={Img} 
                 alt="Charitable Activity" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
           
             </div>
@@ -126,11 +126,11 @@ const SpiritualPathwaysSection = () => {
                 </svg>
               </a>
             </div>
-            <div className="md:w-2/5 relative">
+            <div className="md:w-2/5 relative max-h-[350px] overflow-hidden">
               <img 
                 src={Img}
                 alt="Monthly Puja & Seva Events" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
         
             </div>
@@ -150,11 +150,11 @@ const SpiritualPathwaysSection = () => {
                 </svg>
               </a>
             </div>
-            <div className="relative h-48 md:h-auto">
+            <div className="relative h-48 md:h-auto max-h-[350px] overflow-hidden">
               <img 
                 src={Img1} 
                 alt="Chadhava" 
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[350px] object-cover"
               />
              
             </div>

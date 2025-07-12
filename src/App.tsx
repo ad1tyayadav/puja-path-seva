@@ -22,18 +22,18 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/live-streaming" element={<LiveStreaming />} />
-        <Route path="/book-puja" element={<BookPuja />} />
+        <Route path="/LiveStreaming" element={<LiveStreaming />} />
+        <Route path="/BookPuja" element={<BookPuja />} />
         <Route path="/chadhava" element={<Chadava />} />
-        <Route path="/donations" element={<Donations />} />
+        <Route path="/Donations" element={<Donations />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/auth" element={<Auth />} />
 
         <Route path="/live-streaming/puja-stream" element={<LivePujaStreamPage />} />
-        <Route path="/book-puja/puja-details" element={<PujaDetails />} />
-        <Route path="/book-puja/puja-sankalp" element={<PujaSankalp />} />
-        <Route path="/book-puja/explore-temples" element={<ExploreTemples />} />
+        <Route path="/puja-details" element={<PujaDetails />} />
+        <Route path="/puja-sankalp" element={<PujaSankalp />} />
+        <Route path="/explore-temples" element={<ExploreTemples />} />
         <Route path="/chadhava/sankalp" element={<ChadhavaSankalp />} />
         <Route path="/chadhava/checkout" element={<ChadhavaCheckout />} />
         <Route path="/donations/temple" element={<TempleDonation />} />

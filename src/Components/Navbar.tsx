@@ -28,7 +28,7 @@ const ChevronDownIcon = () => (
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isPujaDropdownOpen, setIsPujaDropdownOpen] = useState(false);
+
   const navigate = useNavigate();
   const navLinkClasses = "text-gray-800 hover:text-orange-500 transition-colors duration-200";
   const mainNavLinks = [
@@ -38,12 +38,9 @@ const Navbar = () => {
     { path: "/Chadhava", label: "Chadhava" },
     { path: "/Donations", label: "Donations" },
     { path: "/Notifications", label: "Notifications" },
+    
   ];
-  const pujaDropdownLinks = [
-      { path: "/book-puja", label: "Book Puja" },
-      { path: "/chadhava", label: "Chadhava" },
-      { path: "/live-streaming", label: "Live Streaming" },
-  ];
+
 
   // Custom Logo component - styled to match the image
   const Logo = () => (
@@ -69,30 +66,7 @@ const Navbar = () => {
           {/* Main Navigation - Desktop */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {mainNavLinks.map(link => (
-              link.label === "Book Puja" ? (
-                <div
-                  key={link.path}
-                  className="relative"
-                  onMouseEnter={() => setIsPujaDropdownOpen(true)}
-                  onMouseLeave={() => setIsPujaDropdownOpen(false)}
-                >
-                  <div className={`${navLinkClasses} flex items-center cursor-pointer font-medium`}>
-                    {link.label} <ChevronDownIcon />
-                  </div>
-                  {isPujaDropdownOpen && (
-                    <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-xl shadow-2xl p-4 z-20 ring-1 ring-black ring-opacity-5">
-                      <div className="grid grid-cols-2 gap-4">
-                        {pujaDropdownLinks.map(dropdownLink => (
-                          <a key={dropdownLink.path} href={dropdownLink.path} className="text-sm text-gray-700 hover:text-orange-500 flex items-center space-x-2">
-                            <span className="w-8 h-8 bg-gray-200 rounded-full"></span>
-                            <span>{dropdownLink.label}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
+              (
                 <a key={link.path} href={link.path} className={`${navLinkClasses} font-medium`}>
                   {link.label}
                 </a>
@@ -133,11 +107,7 @@ const Navbar = () => {
               </a>
             ))}
             {/* Mobile dropdown items displayed flat */}
-            {pujaDropdownLinks.map(link => (
-              <a key={link.path} href={link.path} onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-orange-500">
-                {link.label}
-              </a>
-            ))}
+           
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="px-5 flex items-center justify-between">
