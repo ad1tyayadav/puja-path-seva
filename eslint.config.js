@@ -22,15 +22,11 @@ export default tseslint.config([
       globals: globals.browser,
     },
     rules: {
-      // TEMPORARY: Disable common lint blockers for smoother deploy
       '@typescript-eslint/no-unused-vars': 'off',
       'no-unused-vars': 'off',
       'no-console': 'off',
       'react-hooks/rules-of-hooks': 'off',
       'react-hooks/exhaustive-deps': 'off',
-      'no-debugger': 'off',
-      'no-empty': 'off',
-      'no-undef': 'off',
     },
   },
 ])
