@@ -13,6 +13,7 @@ function BookPuja() {
       ceremonyType: "Amavasya Special",
       description: "Pind Pradaan, Til Tarpan Puja, & Pitra Dosha Puja for the Salvation of all Ancestors",
       image: "https://sugamdarshan.com/assets/images/services/services-bg-1.jpg",
+      joined: "18",
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ function BookPuja() {
       ceremonyType: "Magh Purnima Special",
       description: "Sundar Kand Path & 1008 Karya Siddhi Beej Mantra Jaap &",
       image: "https://sugamdarshan.com/assets/images/services/services-bg-1.jpg",
+      joined: "10",
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ function BookPuja() {
       ceremonyType: "Kalasthmi Special",
       description: "11000 Swarna Akarshan Bhairav Yagna and Ashtakam Path on Kalasthmi Tithi",
       image: "https://sugamdarshan.com/assets/images/services/services-bg-1.jpg",
+      joined: "20",
     },
   ];
 

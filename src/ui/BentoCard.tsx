@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+type AlignType = 'left' | 'right';
+
 interface BentoCardProps {
     title: string;
     description: string;
@@ -9,7 +11,7 @@ interface BentoCardProps {
     ctaLink: string;
     bgImage: string;
     width?: string;
-    align?: 'left' | 'right';
+    align?: AlignType;
 }
 
 const BentoCard: React.FC<BentoCardProps> = ({

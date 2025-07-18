@@ -75,7 +75,7 @@ const SpiritualPathwaysSection = () => {
               ctaLink={card.ctalink}
               bgImage={card.bgImage}
               width={card.width}
-              align={card.align}
+              align={card.align as 'left' | 'right'}
             />
           ))}
         </div>
