@@ -10,7 +10,7 @@ interface Puja {
   ceremonyType: string;
   description: string;
   image: string;
-  joined: number | string;
+  joined: number;
 }
 
 const PujaCard: React.FC<{ puja: Puja }> = ({ puja }) => {
