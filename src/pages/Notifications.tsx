@@ -1,69 +1,131 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-type NotificationType = "NEW" | "Unread";
+function Notifications() {
+  const [activeTab, setActiveTab] = useState('NEW');
 
-const notifications = {
-  NEW: [
-    "Lorme ipsim kaksnnianw jenfanienfmaer skjnnaejknvmnae signanemn gina",
-    "Another new notification text here for example only.",
-  ],
-  Unread: [
-    "Old unread message or notification sample text for the list item",
-    "Lorem ipsum unread second line example for clarity",
-    "Sample content that simulates unread status",
-    "Fourth unread message simulating older alert",
-  ],
-};
-
-const NotificationPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<NotificationType>("NEW");
+  const notifications = [
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina",
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina", 
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina",
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina",
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina",
+    "Lorem ipsum kaksnnianw jenfanienfmaer skjnnaejknvmnae signanenm gina"
+  ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-orange-50 relative px-4">
-      {/* Background mandalas */}
-      <div className="absolute left-0 top-0 w-48 opacity-10 hidden md:block">
-        <img src="/mandala-left.png" alt="left mandala" />
-      </div>
-      <div className="absolute right-0 bottom-0 w-48 opacity-10 hidden md:block">
-        <img src="/mandala-right.png" alt="right mandala" />
-      </div>
+    <div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 relative overflow-hidden">
+        {/* Import Playfair Display font */}
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
-      {/* Notification Card */}
-      <div className="bg-white border border-orange-300 rounded-3xl shadow-2xl max-w-2xl w-full p-6 relative z-10">
-        <h1 className="text-3xl text-center font-bold text-orange-500 mb-6">
-          Notifications
-        </h1>
-
-        {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-6">
-          {(["NEW", "Unread"] as NotificationType[]).map((tab) => (
-            <button
-              key={tab}
-              className={`px-6 py-2 rounded-full font-semibold shadow-md transition 
-                ${
-                  activeTab === tab
-                    ? "bg-orange-100 text-orange-600"
-                    : "bg-orange-50 text-gray-500"
-                }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+        {/* Background decorative mandala elements */}
+        <div className="absolute top-20 left-8 w-64 h-64 opacity-8">
+          <div className="w-full h-full rounded-full border-4 border-orange-200 relative">
+            <div className="absolute inset-4 rounded-full border-2 border-orange-300">
+              <div className="absolute inset-4 rounded-full border-2 border-orange-400">
+                <div className="absolute inset-4 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-orange-100 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Notification List */}
-        <ul className="space-y-4 text-sm text-gray-700 px-2">
-          {notifications[activeTab].map((item, index) => (
-            <li key={index} className="flex items-start">
-              <span className="mr-2 text-orange-400 text-lg">~</span>
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="absolute bottom-16 right-8 w-80 h-80 opacity-6">
+          <div className="w-full h-full rounded-full border-4 border-gray-200 relative">
+            <div className="absolute inset-6 rounded-full border-3 border-gray-300">
+              <div className="absolute inset-6 rounded-full border-2 border-gray-400">
+                <div className="absolute inset-6 rounded-full border-2 border-gray-500 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gray-100 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            {/* Decorative petals */}
+            {[...Array(8)].map((_, i) => (
+              <div 
+                key={i}
+                className="absolute w-6 h-12 bg-gray-300 rounded-full"
+                style={{
+                  top: '50%',
+                  left: '50%',
+                  transformOrigin: '3px 50%',
+                  transform: `translate(-50%, -50%) rotate(${i * 45}deg) translateY(-100px)`
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          <div className="flex justify-center items-center min-h-[80vh]">
+            <div className="w-full max-w-4xl">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <h1 className="text-4xl lg:text-6xl font-extrabold text-transparent bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text mb-8" style={{fontFamily: 'Playfair Display, serif', fontWeight: 800}}>
+                  Notifications
+                </h1>
+
+                {/* Small decorative mandala */}
+                <div className="flex justify-center mb-8">
+                  <div className="w-16 h-16 opacity-20">
+                    <div className="w-full h-full rounded-full border-2 border-gray-300 relative">
+                      <div className="absolute inset-1 rounded-full border border-gray-400">
+                        <div className="absolute inset-1 rounded-full border border-gray-500 flex items-center justify-center">
+                          <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Notifications Panel */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-orange-200 relative">
+                {/* Tab Buttons */}
+                <div className="flex justify-center space-x-4 mb-8">
+                  <button
+                    onClick={() => setActiveTab('NEW')}
+                    className={`px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ${
+                      activeTab === 'NEW'
+                        ? 'bg-gradient-to-r from-orange-300 to-orange-400 text-orange-800 shadow-lg'
+                        : 'bg-orange-100 text-orange-600 hover:bg-orange-200'
+                    }`}
+                  >
+                    NEW
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('Unread')}
+                    className={`px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ${
+                      activeTab === 'Unread'
+                        ? 'bg-gradient-to-r from-orange-300 to-orange-400 text-orange-800 shadow-lg'
+                        : 'bg-orange-100 text-orange-600 hover:bg-orange-200'
+                    }`}
+                  >
+                    Unread
+                  </button>
+                </div>
+
+                {/* Notifications List */}
+                <div className="space-y-4 max-h-96 overflow-y-auto">
+                  {notifications.map((notification, index) => (
+                    <div key={index} className="flex items-start space-x-3 p-4 hover:bg-orange-50 rounded-lg transition-all duration-300">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                      </div>
+                      <p className="text-gray-700 text-base leading-relaxed flex-1">
+                        {notification}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+}
 
-export default NotificationPage;
+export default Notifications;

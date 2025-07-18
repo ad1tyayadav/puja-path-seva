@@ -1,46 +1,8 @@
-import React, { useState } from 'react';
-import { Check, MapPin, Calendar, Users, Star } from 'lucide-react';
+import { MapPin, Calendar, Users, Star } from 'lucide-react';
 import ChadhavaSection from '../ui/ChadavaHero';
 import ChadavaOffering from '../ui/ChadavaOffering';
 
 const Chadhava = () => {
-  const [selectedOffering, setSelectedOffering] = useState('Peda Bhog');
-  const [selectedTab, setSelectedTab] = useState('Individual');
-
-  const offerings = [
-    {
-      id: 'laddu',
-      name: 'Laddu',
-      description: 'Laddus, especially boondi or besan variant laddus, are sumptuous.',
-      price: 25,
-      type: 'Individual'
-    },
-    {
-      id: 'hanuman-chola',
-      name: 'Hanuman Ji Chola',
-      description: 'Offer Chola to Hanuman Ji to connect your soul with the divine energy and feel present.',
-      price: 25,
-      type: 'Individual'
-    },
-    {
-      id: 'peda-bhog',
-      name: 'Peda Bhog',
-      description: 'Offering peda to Hanuman Ji is considered highly auspicious and fills devotees with spiritual energy.',
-      price: 25,
-      type: 'Combination'
-    },
-    {
-      id: 'offer-sindoor',
-      name: 'Offer Sindoor',
-      description: 'Offering sindoor to Lord Hanuman is one of the most powerful forms of worship.',
-      price: 100,
-      type: 'Individual'
-    }
-  ];
-
-  const filteredOfferings = offerings.filter(offering =>
-    selectedTab === 'Individual' ? offering.type === 'Individual' : offering.type === 'Combination'
-  );
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center">

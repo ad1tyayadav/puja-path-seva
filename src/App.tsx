@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import LiveStreaming from './pages/LiveStreaming';
 import BookPuja from './pages/BookPuja';
 import Chadava from "./pages/Chadava";
-import Donations from './pages/Donations';
 import Profile from './pages/Profile';
 import Auth from './pages/Auth';
 import LivePujaStreamPage from './pages/details/LivePujaStreamPuja';
@@ -17,6 +16,7 @@ import ChadhavaCheckout from './pages/details/ChadhavaCheckout';
 import TempleDonation from './pages/details/TempleDonation';
 import Layout from "./ui/Layout";
 import NotificationPage from "./pages/Notifications";
+import Donations from "./pages/Donations";
 
 function App() {
   return (
