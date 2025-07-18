@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import LogoImg from '../../public/assets/Logo.png';
+import LogoImg from '/assets/Logo.png';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -82,9 +82,6 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
               <UserIcon />
             </div>
-            <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
-              <MenuIcon />
-            </button>
           </div>
 
           {/* Mobile menu button */}

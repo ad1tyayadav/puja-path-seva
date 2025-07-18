@@ -1,14 +1,12 @@
 
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
 import LiveStreamingHero from '../Components/HeroLiveStreaming'
+import LiveStreamComponent from '../ui/LiveStramComponent'
 
 function LiveStreaming() {
   return (
     <div>
-      <Navbar />
      <LiveStreamingHero/>
-      <Footer />
+     <LiveStreamComponent />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import LogoImg from '../../public/assets/LoginPuja.png';
-import LogoImg2 from '../../public/assets/Logo.png';
+import LogoImg from '/assets/LoginPuja.png';
+import LogoImg2 from '/assets/Logo.png';
 // Close icon component
 const CloseIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -175,18 +175,6 @@ const AuthModal = () => {
             {mode === 'register' ? 'Login' : 'Register'}
           </button>
         </div>
-      </div>
-
-      {/* WhatsApp floating button */}
-      <div className="absolute bottom-6 right-6">
-        <a 
-          href="https://wa.me/918470930672" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <WhatsAppIcon />
-        </a>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Radio, Users, MapPin, Clock } from 'lucide-react';
-import Img from "../../public/assets/Shivji1.png"
+import Img from "/assets/Shivji1.png"
 const LiveStreamingHero: React.FC = () => {
   const [liveViewers, setLiveViewers] = useState(1247);
   
