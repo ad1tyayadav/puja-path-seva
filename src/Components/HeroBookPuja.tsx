@@ -1,5 +1,3 @@
-import React from 'react';
-
 function BookPuja() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 relative overflow-hidden">

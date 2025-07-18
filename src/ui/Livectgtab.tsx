@@ -1,5 +1,5 @@
 // src/components/LiveCategoryTabs.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const categories = ["all", "new", "tab"];
 

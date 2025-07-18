@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Notifications() {
   const [activeTab, setActiveTab] = useState('NEW');

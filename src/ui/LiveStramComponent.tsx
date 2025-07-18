@@ -1,5 +1,3 @@
-// src/pages/LiveStreaming.tsx
-import React from 'react';
 import LiveCategoryTabs from './Livectgtab';
 import LiveStreamCard from './LiveStreamCard';
 const dummyStreams = [

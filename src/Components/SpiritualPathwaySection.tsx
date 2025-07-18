@@ -1,4 +1,3 @@
-import React from "react";
 import BentoCard from "../ui/BentoCard";
 
 const cardData = [

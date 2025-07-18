@@ -1,4 +1,3 @@
-// src/components/LiveStreamCard.tsx
 import React from 'react';
 
 interface Stream {
