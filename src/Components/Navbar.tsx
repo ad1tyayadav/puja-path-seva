@@ -28,7 +28,7 @@ const Navbar = () => {
   const mainNavLinks = [
     { path: "/", label: "Home" },
     { path: "/BookPuja", label: "Book Puja" },
-    { path: "/LiveStreaming", label: "Live Streaming" },
+    { path: "/live-stream", label: "Live Streaming" },
     { path: "/Chadhava", label: "Chadhava" },
     { path: "/Donations", label: "Donations" },
     { path: "/Notifications", label: "Notifications" },

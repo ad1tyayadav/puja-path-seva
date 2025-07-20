@@ -25,14 +25,14 @@ function App() {
 
         <Route element={<Layout />} >
           <Route path="/" element={<Home />} />
-          <Route path="/LiveStreaming" element={<LiveStreaming />} />
+          <Route path="/live-stream" element={<LiveStreaming />} />
           <Route path="/BookPuja" element={<BookPuja />} />
           <Route path="/chadhava" element={<Chadava />} />
           <Route path="/Donations" element={<Donations />} />
           <Route path="/notifications" element={<NotificationPage />} />
           <Route path="/profile" element={<Profile />} />
 
-          <Route path="/live-streaming/puja-stream" element={<LivePujaStreamPage />} />
+          <Route path="/live-stream/:id" element={<LivePujaStreamPage />} />
           <Route path="/puja-details" element={<PujaDetails />} />
           <Route path="/puja-sankalp" element={<PujaSankalp />} />
           <Route path="/explore-temples" element={<ExploreTemples />} />

@@ -38,7 +38,7 @@ function HeroDonations() {
           </div>
           {/* Decorative petals for large mandala */}
           {[...Array(8)].map((_, i) => (
-            <div 
+            <div
               key={i}
               className={`absolute w-8 h-16 bg-gray-300 rounded-full`}
               style={{
@@ -57,17 +57,17 @@ function HeroDonations() {
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-8 pt-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{fontFamily: 'Playfair Display, serif', fontWeight: 800}}>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 800 }}>
                 Support Seva & Annadan —
               </h1>
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{fontFamily: 'Playfair Display, serif', fontWeight: 800}}>
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 800 }}>
                 Spread Blessings Across
               </h2>
-              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{fontFamily: 'Playfair Display, serif', fontWeight: 800}}>
+              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 800 }}>
                 Sacred Temples
               </h3>
             </div>
-            
+
             <p className="text-base lg:text-lg text-gray-700 max-w-2xl leading-relaxed font-normal">
               Offer your Shraddha in the form of donation and seva—support temple rituals, daily pujas, annadanam (food donation), and Gaushala seva. Your contribution sustains sacred practices and illuminates lives across India.
             </p>
@@ -76,60 +76,60 @@ function HeroDonations() {
               <button className="bg-gradient-to-r from-orange-400 to-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-orange-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl block w-fit">
                 View Upcoming Chadava
               </button>
-              
+
               <button className="border-2 border-orange-400 text-orange-600 bg-orange-50 px-8 py-3 rounded-full text-lg font-medium hover:bg-orange-100 hover:border-orange-500 transition-all duration-300 block w-fit">
                 How it works
               </button>
             </div>
           </div>
 
-          {/* Right Content - Temple Images Collage */}
-          <div className="lg:w-1/2 relative h-[85vh] mt-12 lg:mt-0 flex items-center justify-end">
-            
-            {/* Top Right - Mountain Temple */}
-            <div className="absolute top-8 right-12 z-20">
-              <div className="bg-gradient-to-br from-orange-300 to-orange-400 p-1 rounded-2xl shadow-xl transform rotate-3">
-                <img 
-                  src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=280&h=180&fit=crop&crop=center" 
-                  alt="Mountain Temple" 
-                  className="w-72 h-44 object-cover rounded-xl"
-                />
-              </div>
-            </div>
+          {/* Right Content - Tilted Image Square Grid */}
+          <div className="lg:w-1/2 relative h-[85vh] mt-12 lg:mt-0 flex items-center justify-center">
+            <div className="relative w-[340px] h-[340px] rotate-45">
 
-            {/* Top Right Small - Palace/Temple */}
-            <div className="absolute top-4 right-4 z-15">
-              <div className="bg-gradient-to-br from-orange-400 to-red-400 p-1 rounded-xl shadow-lg transform -rotate-2">
-                <img 
-                  src="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=200&h=140&fit=crop&crop=center" 
-                  alt="Palace Temple" 
-                  className="w-48 h-32 object-cover rounded-lg"
+              {/* Top Left */}
+              <div className="kite-wrapper" style={{ top: 0, left: 0 }}>
+                <div className="kite-border" style={{ borderColor: '#fb923c' }}></div>
+                <img
+                  src="/assets/Kedarnath.jpg"
+                  alt="Kite Temple"
+                  className="kite-image"
                 />
               </div>
-            </div>
 
-            {/* Center Large - Ganga Aarti/River Scene */}
-            <div className="absolute top-1/2 right-8 transform -translate-y-1/2 z-25">
-              <div className="bg-gradient-to-br from-yellow-300 to-orange-400 p-1 rounded-2xl shadow-2xl transform rotate-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1558431382-27e303142719?w=320&h=240&fit=crop&crop=center" 
-                  alt="Ganga Aarti Evening" 
-                  className="w-80 h-56 object-cover rounded-xl"
+              {/* Top Right */}
+              <div className="kite-wrapper" style={{ top: 0, right: 0 }}>
+                <div className="kite-border" style={{ borderColor: '#f97316' }}></div>
+                <img
+                  src="/assets/HeroPhoto.png"
+                  alt="Palace Temple"
+                  className="kite-image"
                 />
               </div>
-            </div>
 
-            {/* Bottom Right - Golden Temple */}
-            <div className="absolute bottom-12 right-16 z-20">
-              <div className="bg-gradient-to-br from-blue-300 to-blue-400 p-1 rounded-2xl shadow-xl transform -rotate-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=260&h=160&fit=crop&crop=center" 
-                  alt="Golden Temple" 
-                  className="w-64 h-40 object-cover rounded-xl"
+              {/* Bottom Left */}
+              <div className="kite-wrapper" style={{ bottom: 0, left: 0 }}>
+                <div className="kite-border" style={{ borderColor: '#60a5fa' }}></div>
+                <img
+                  src="/assets/Shivji1.png"
+                  alt="Golden Temple"
+                  className="kite-image"
                 />
               </div>
+
+              {/* Bottom Right */}
+              <div className="kite-wrapper" style={{ bottom: 0, right: 0 }}>
+                <div className="kite-border" style={{ borderColor: '#facc15' }}></div>
+                <img
+                  src="/assets/Ganesh1.png"
+                  alt="Ganga Aarti"
+                  className="kite-image"
+                />
+              </div>
+
             </div>
           </div>
+
         </div>
       </div>
     </div>
