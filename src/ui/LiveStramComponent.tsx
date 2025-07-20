@@ -7,7 +7,7 @@ export interface Stream {
   location?: string;
   thumbnail: string;
   videoSrc?: string;
-  category?: string;
+  category: string;
   isLive: boolean;
   views: number;
   date?: string;
