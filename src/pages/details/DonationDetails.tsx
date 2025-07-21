@@ -15,7 +15,7 @@ export default function DonationDetails() {
 
   const quickAmounts = [501, 1001, 2101, 5001, 11001];
 
-  const handleInput = (e) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -26,49 +26,49 @@ export default function DonationDetails() {
         <div className="lg:col-span-2 space-y-6">
           {/* Info Card */}
           <div className="bg-white p-6 rounded-xl shadow border">
-  <h2 className="text-2xl font-bold text-orange-500 mb-2">About Temple Renovation Fund</h2>
-  <p className="text-gray-700">
-    Support the restoration and maintenance of ancient temple structures and sacred spaces.
-  </p>
+            <h2 className="text-2xl font-bold text-orange-500 mb-2">About Temple Renovation Fund</h2>
+            <p className="text-gray-700">
+              Support the restoration and maintenance of ancient temple structures and sacred spaces.
+            </p>
 
-  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-    {/* Item 1 */}
-    <div className="flex items-start gap-3">
-      <Heart className="text-red-500 mt-1" />
-      <div>
-        <h4 className="font-semibold text-[#1b1c31]">Daily Seva</h4>
-        <p className="text-sm text-gray-600">Support daily temple operations</p>
-      </div>
-    </div>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Item 1 */}
+              <div className="flex items-start gap-3">
+                <Heart className="text-red-500 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-[#1b1c31]">Daily Seva</h4>
+                  <p className="text-sm text-gray-600">Support daily temple operations</p>
+                </div>
+              </div>
 
-    {/* Item 2 */}
-    <div className="flex items-start gap-3">
-      <Gift className="text-purple-500 mt-1" />
-      <div>
-        <h4 className="font-semibold text-[#1b1c31]">Festival Celebrations</h4>
-        <p className="text-sm text-gray-600">Fund special festival arrangements</p>
-      </div>
-    </div>
+              {/* Item 2 */}
+              <div className="flex items-start gap-3">
+                <Gift className="text-purple-500 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-[#1b1c31]">Festival Celebrations</h4>
+                  <p className="text-sm text-gray-600">Fund special festival arrangements</p>
+                </div>
+              </div>
 
-    {/* Item 3 */}
-    <div className="flex items-start gap-3">
-      <Users className="text-blue-600 mt-1" />
-      <div>
-        <h4 className="font-semibold text-[#1b1c31]">Community Service</h4>
-        <p className="text-sm text-gray-600">Support free food distribution</p>
-      </div>
-    </div>
+              {/* Item 3 */}
+              <div className="flex items-start gap-3">
+                <Users className="text-blue-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-[#1b1c31]">Community Service</h4>
+                  <p className="text-sm text-gray-600">Support free food distribution</p>
+                </div>
+              </div>
 
-    {/* Item 4 */}
-    <div className="flex items-start gap-3">
-      <Clock className="text-green-600 mt-1" />
-      <div>
-        <h4 className="font-semibold text-[#1b1c31]">Maintenance</h4>
-        <p className="text-sm text-gray-600">Temple upkeep and preservation</p>
-      </div>
-    </div>
-  </div>
-</div>
+              {/* Item 4 */}
+              <div className="flex items-start gap-3">
+                <Clock className="text-green-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-[#1b1c31]">Maintenance</h4>
+                  <p className="text-sm text-gray-600">Temple upkeep and preservation</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Contribution Form */}
           <div className="bg-white p-6 rounded-xl shadow border">
@@ -80,9 +80,8 @@ export default function DonationDetails() {
                 <button
                   key={amt}
                   onClick={() => setAmount(amt)}
-                  className={`px-4 py-2 border rounded-lg ${
-                    amount === amt ? "bg-orange-100 border-orange-500" : "border-gray-300"
-                  }`}
+                  className={`px-4 py-2 border rounded-lg ${amount === amt ? "bg-orange-100 border-orange-500" : "border-gray-300"
+                    }`}
                 >
                   ₹{amt}
                 </button>
