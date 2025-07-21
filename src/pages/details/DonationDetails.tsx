@@ -15,7 +15,9 @@ export default function DonationDetails() {
 
   const quickAmounts = [501, 1001, 2101, 5001, 11001];
 
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
