@@ -30,7 +30,7 @@ const Navbar = () => {
     { path: "/BookPuja", label: "Book Puja" },
     { path: "/live-stream", label: "Live Streaming" },
     { path: "/Chadhava", label: "Chadhava" },
-    { path: "/Donations", label: "Donations" },
+    { path: "/donations", label: "Donations" },
     { path: "/Notifications", label: "Notifications" },
 
     

@@ -48,7 +48,7 @@ const OurPujaSection = () => {
         className="w-full h-full object-cover fixed top-0 left-0"
         style={{ zIndex: -2 }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-orange-500/50 mix-blend-overlay z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-orange-500/50 mix-blend-overlay z-[1]" />
     </div>
 
     {/* Content */}

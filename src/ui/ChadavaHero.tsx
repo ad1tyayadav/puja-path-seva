@@ -1,6 +1,4 @@
-import React from "react";
 import { Check } from "lucide-react";
-import Kedarnath from "/assets/Kedarnath.jpg";
 
 const ChadhavaSection = () => {
     return (
@@ -14,9 +12,9 @@ const ChadhavaSection = () => {
                 </p>
             </div>
             <div className="relative flex items-center justify-center">
-                <div className="w-[53vw]">
+                <div className="w-[55vw]">
                     <img
-                        src={Kedarnath}
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6f/BAPS_Swaminarayan_Mandir%2C_Pune.jpg"
                         alt="Hanumangarhi Temple"
                         className="w-full h-full object-cover rounded"
                     />
@@ -28,7 +26,7 @@ const ChadhavaSection = () => {
                         <span className="text-sm">Ready to book</span>
                     </div>
                     <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition">
-                        Donate Now →
+                        Donate Now
                     </button>
                     <p className="text-xs text-gray-500 mt-2">Secured Payment</p>
                 </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LogoImg from '/assets/LoginPuja.png';
 import LogoImg2 from '/assets/Logo.png';
+import { useNavigate } from 'react-router-dom';
 // Close icon component
 const CloseIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -21,15 +22,17 @@ const AuthModal = () => {
   const [name, setName] = useState('');
   const [countryCode, setCountryCode] = useState('91');
 
-  const handleMobileChange = (e:any) => {
+  const navigate = useNavigate()
+
+  const handleMobileChange = (e: any) => {
     setMobileNumber(e.target.value);
   };
 
-  const handleNameChange = (e:any) => {
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
   };
 
-  const handleCountryCodeChange = (e:any) => {
+  const handleCountryCodeChange = (e: any) => {
     setCountryCode(e.target.value);
   };
 
@@ -54,7 +57,8 @@ const AuthModal = () => {
   return (
     <div className="bg-white rounded-xl max-w-md w-full relative shadow-2xl">
       {/* Close button */}
-      <button 
+      <button
+        onClick={() => { navigate('/') }}
         className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
         aria-label="Close"
       >
@@ -64,9 +68,9 @@ const AuthModal = () => {
       <div className="p-8">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <img 
-            src={LogoImg2} 
-            alt="PujaPathSeva" 
+          <img
+            src={LogoImg2}
+            alt="PujaPathSeva"
             className="h-16"
             // Fallback style if image not available
             style={{
@@ -84,7 +88,7 @@ const AuthModal = () => {
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
           Register for Your PujaPathSeva Account
         </h2>
-        
+
         <p className="text-gray-600 text-center mb-6">
           Create an account to begin your spiritual journey with PujaPathSeva.
         </p>

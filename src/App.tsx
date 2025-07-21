@@ -11,12 +11,13 @@ import LivePujaStreamPage from './pages/details/LivePujaStreamPuja';
 import ExploreTemples from './pages/details/ExploreTemples';
 import PujaDetails from './pages/details/PujaDetails';
 import PujaSankalp from './pages/details/PujaSankalp';
-import ChadhavaSankalp from './pages/details/ChadhavaSankalp';
 import ChadhavaCheckout from './pages/details/ChadhavaCheckout';
-import TempleDonation from './pages/details/TempleDonation';
 import Layout from "./ui/Layout";
 import NotificationPage from "./pages/Notifications";
 import Donations from "./pages/Donations";
+import ChadhavaSelection from "./pages/details/ChadhavaSelection";
+import ChadhavaDetails from "./pages/details/ChadhavaDetails";
+import DonationDetails from "./pages/details/DonationDetails";
 
 function App() {
   return (
@@ -28,17 +29,18 @@ function App() {
           <Route path="/live-stream" element={<LiveStreaming />} />
           <Route path="/BookPuja" element={<BookPuja />} />
           <Route path="/chadhava" element={<Chadava />} />
-          <Route path="/Donations" element={<Donations />} />
+          <Route path="/chadhava-details/:id" element={<ChadhavaDetails />} />
+          <Route path="/donations" element={<Donations />} />
+          <Route path="/donation-details/:id" element={<DonationDetails />} />
           <Route path="/notifications" element={<NotificationPage />} />
           <Route path="/profile" element={<Profile />} />
 
           <Route path="/live-stream/:id" element={<LivePujaStreamPage />} />
-          <Route path="/puja-details" element={<PujaDetails />} />
-          <Route path="/puja-sankalp" element={<PujaSankalp />} />
+          <Route path="/puja-details/:id" element={<PujaDetails />} />
+          <Route path="/puja-details/:id/sankalp" element={<PujaSankalp />} />
           <Route path="/explore-temples" element={<ExploreTemples />} />
-          <Route path="/chadhava/sankalp" element={<ChadhavaSankalp />} />
+          <Route path="/chadhava-selection" element={<ChadhavaSelection />} />
           <Route path="/chadhava/checkout" element={<ChadhavaCheckout />} />
-          <Route path="/donations/temple" element={<TempleDonation />} />
         </Route>
         <Route path="/auth" element={<Auth />} />
       </Routes>
