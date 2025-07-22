@@ -7,13 +7,14 @@ const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="w-full py-16 px-4 bg-gradient-to-r from-orange-50 to-white relative overflow-hidden z-10">
       {/* Temple Silhouette */}
-      <div className="absolute bottom-0 left-0 w-full z-0 opacity-40">
+      <div className="absolute bottom-0 left-0 w-full z-0 opacity-20">
         <img src={Img2} alt="Temple Silhouette" className="w-full h-auto object-cover" />
       </div>
 
@@ -29,17 +30,17 @@ const AboutSection = () => {
 
               {/* Main Title */}
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-               Puja Path Seva
+                Puja Path Seva
               </h2>
 
               <div className="space-y-6 text-gray-700 text-lg">
                 <p>
-                 Puja Path seva is an online devotional platform that connects the divine to
+                  Puja Path seva is an online devotional platform that connects the divine to
                   the devotees. It allows you to book different kinds of sevas at various temples of your
                   choice, across India. We offer a large list of spiritual sevas that hold an extreme
                   importance in the Hindu culture.
                 </p>
-                <p>
+                <p className="hidden lg:block">
                   Puja Path Seva also organizes Sanyasi
                   Bhojan, Brahmin Bhojan, Sadhu Bhojan, Maha Amaddan Sewa and Gau Sewa every day
                   or Specially on some Auspicious Days Like Annawasya, Poomima, Ekadashi, Pradesh and
@@ -47,7 +48,7 @@ const AboutSection = () => {
                   Varanasi, Prayagraj, Haridwar, Ayadhya and Ujjam
                 </p>
               </div>
-              
+
               <div className="pt-4">
                 <button className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-semibold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
                   More About Us
@@ -58,24 +59,20 @@ const AboutSection = () => {
             {/* Left: Images */}
             <div className="w-full lg:w-1/2 flex justify-center relative">
               <div className="relative w-full max-w-[500px]">
-                {/* Pinkish Shadow */}
                 <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-pink-200 via-orange-200 to-yellow-100 transform -rotate-3 z-0 opacity-80"></div>
-                
-                {/* Main Image Container */}
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl h-[300px] lg:h-auto">
                   <img
                     src={Img1}
                     alt="Lord Shiva"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                
-                {/* Circular Image Overlay */}
-                <div className="absolute -bottom-8 -left-8 w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-xl z-20 bg-white">
-                  <img 
-                    src={Img} 
-                    alt="Lord Ganesha" 
-                    className="w-full h-full object-cover" 
+
+                <div className="absolute -bottom-8 -left-4 w-36 h-36 md:-bottom-8 md:-left-8 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-xl z-20 bg-white">
+                  <img
+                    src={Img}
+                    alt="Lord Ganesha"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
