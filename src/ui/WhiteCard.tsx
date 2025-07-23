@@ -1,4 +1,4 @@
-import { Calendar } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -12,8 +12,6 @@ interface Puja {
   image: string;
   joined: number;
 }
-
-const MALA_URL = "/assets/Mala1.png";
 
 const WhiteCard: React.FC<{ puja: Puja }> = ({ puja }) => {
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ const WhiteCard: React.FC<{ puja: Puja }> = ({ puja }) => {
         
         {/* Joined Count */}
         <div className="flex items-center text-sm text-gray-600 font-medium">
-          <img src={MALA_URL} alt="joined" className="w-5 h-5 mr-1.5 rounded-full object-contain" />
+        <User />
           {puja.joined ?? 0} Joined
         </div>
       </div>

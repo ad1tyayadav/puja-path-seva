@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { CalendarDays, MapPin } from "lucide-react";
+import { CalendarDays, MapPin, User } from "lucide-react";
 
 interface ChadhavaItem {
   id: string;
@@ -28,20 +28,22 @@ const ChadhavaCard: FC<{ data: ChadhavaItem }> = ({ data }) => {
         <h3 className="text-lg font-semibold text-red-700">{data.title}</h3>
         <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-3">{data.description}</p>
 
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
+        <div className="flex items-center text-orange-400 gap-2 text-sm text-gray-500 mb-3">
           <MapPin className="w-4 h-4" />
           <span>{data.location}</span>
         </div>
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-          <CalendarDays className="w-4 h-4" />
-          <span>{data.date}</span>
-        </div>
 
-        {/* Capsules */}
-        <div className="flex gap-2 text-xs mb-4">
-          <span className="bg-orange-100 text-orange-600 px-2 py-1 rounded-full">
-            {data.joined} joined
-          </span>
+        {/* Date and Joined aligned on same line */}
+        <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center gap-2 bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">
+            <CalendarDays className="w-4 h-4" />
+            <span>{data.date}</span>
+          </div>
+          
+          <div className="flex items-center gap-1 text-sm text-gray-600 font-medium">
+            <User className="w-4 h-4" />
+            <span>{data.joined} Joined</span>
+          </div>
         </div>
 
         {/* Book Now Button */}

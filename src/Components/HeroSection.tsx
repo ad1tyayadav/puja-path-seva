@@ -8,14 +8,15 @@ const HeroSection: React.FC = () => {
   return (
     <div className="relative min-h-screen z-10 bg-gradient-to-br from-orange-50 via-white to-orange-50 overflow-hidden">
       <div className="max-w-[100vw] w-full mx-auto">
-        {/* Decorative background patterns */}
+
+        {/* Decorative background patterns (desktop) */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-orange-300 to-red-300 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Mandala SVG */}
-        <div className="absolute top-10 right-10 opacity-20">
+        {/* Mandala SVG (desktop only) */}
+        <div className="absolute top-10 right-10 opacity-20 hidden sm:block">
           <svg width="200" height="200" viewBox="0 0 200 200" className="text-orange-300">
             <defs>
               <pattern id="mandala" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
@@ -31,14 +32,13 @@ const HeroSection: React.FC = () => {
         {/* Content Section */}
         <div className="relative z-10 pt-8 sm:pt-12">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center min-h-[90vh] px-4 sm:px-0">
+
             {/* Left Content */}
             <div className="space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-16 xl:px-24">
               <div className="space-y-4 sm:space-y-6">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   <span className="text-gray-800">PujaPathSeva —</span>
-                  <br />
-                  <span className="text-gray-800">Bringing the</span>
-                  <br />
+                  <span className="text-gray-800">Bringing the </span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
                     Sacred Rituals
                   </span>
@@ -46,8 +46,7 @@ const HeroSection: React.FC = () => {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
                     Sanatan Dharma
                   </span>
-                  <br />
-                  <span className="text-gray-800">to Your Home, No Matter Where You Are</span>
+                  <span className="text-gray-800"> to Your Home, No Matter Where You Are</span>
                 </h1>
 
                 <p className="text-sm sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
@@ -87,8 +86,8 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative hidden sm:block pr-0">
+            {/* Right Image Section for Desktop */}
+            <div className="relative hidden lg:block pr-0">
               <div className="relative">
                 <img
                   src={Img}
@@ -97,6 +96,29 @@ const HeroSection: React.FC = () => {
                 />
               </div>
             </div>
+
+            {/* Mobile Image Styling */}
+            <div className="relative block lg:hidden w-full flex justify-center items-center mt-10">
+              {/* Glow */}
+              <div className="absolute w-72 h-72 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full opacity-40 blur-2xl z-0"></div>
+              
+              {/* Mandala Decoration */}
+              <div className="absolute -top-20 -right-10 z-10 opacity-30">
+                <svg width="180" height="180" viewBox="0 0 200 200" className="text-orange-300">
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="1" />
+                  <circle cx="100" cy="100" r="45" fill="none" stroke="currentColor" strokeWidth="1" />
+                  <circle cx="100" cy="100" r="8" fill="currentColor" />
+                </svg>
+              </div>
+
+              {/* Image */}
+              <img
+                src={Img}
+                alt="Temple Deities"
+                className="relative z-20 w-64 h-auto object-contain drop-shadow-xl"
+              />
+            </div>
+
           </div>
         </div>
       </div>

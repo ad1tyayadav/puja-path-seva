@@ -147,15 +147,6 @@ function Profile() {
                   </div>
                 </div>
               </div>
-
-              {/* Decorative Kalash Image - Bottom Right */}
-              <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8 z-20">
-                <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=150&h=150&fit=crop&crop=center" 
-                  alt="Traditional Kalash with Coins" 
-                  className="w-32 h-32 object-cover opacity-80"
-                />
-              </div>
             </div>
           </div>
         </div>
