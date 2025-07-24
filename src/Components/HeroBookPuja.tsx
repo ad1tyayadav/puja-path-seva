@@ -26,7 +26,8 @@ function HeroBookPuja() {
           
           {/* Left Content Area */}
           <div className="lg:w-1/2 text-center lg:text-left space-y-6 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+             style={{ fontFamily: "Playfair Display, serif" }}>
               Book a Sacred Puja for
               <span className="block text-transparent bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text mt-2">
                 You & Your Family
@@ -56,14 +57,14 @@ function HeroBookPuja() {
             <img 
               src={MALA_URL}
               alt="Mandala Decoration"
-              className="absolute -top-40 -right-20 w-80 max-w-lg opacity-30 z-30 pointer-events-none"
+              className="hidden sm:block absolute -top-28 -right-10 w-80 max-w-lg opacity-30 z-30 pointer-events-none"
             />
 
             {/* Shiva Statue - no extra height around it */}
             <img 
               src={SHIVA_URL}
               alt="Lord Shiva Statue"
-              className="relative top-20 z-20 w-auto max-h-screen h-auto object-contain drop-shadow-2xl transition-transform duration-500 ease-out hover:scale-105"
+              className="hidden sm:block relative top-20 z-20 w-auto max-h-screen h-auto object-contain drop-shadow-2xl transition-transform duration-500 ease-out hover:scale-105"
             />
           </div>
 

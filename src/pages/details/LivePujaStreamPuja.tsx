@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { ArrowUpRight, Share2 } from 'lucide-react';
+import {
+  Share2,
+  Heart,
+  Calendar,
+  Eye,
+  User,
+  MapPin,
+  Dot,
+  Gift,
+} from 'lucide-react';
 import Recomendation from '../../ui/Recomendation';
 
 const LiveStreamPage = () => {
@@ -19,11 +28,12 @@ const LiveStreamPage = () => {
   if (!stream) return null;
 
   return (
-    <div className="min-h-screen bg-[#fffaf5] py-10 px-4 md:px-12">
+    <div className="min-h-screen bg-gradient-to-b from-[#fff5e5] to-[#fffaf5] py-10 px-4 md:px-12 font-[Inter]">
       <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
-        {/* Main Visual Section */}
-        <div className="lg:w-2/3 relative">
-          <div className="overflow-hidden rounded-2xl shadow-lg">
+        {/* Main Section */}
+        <div className="lg:w-2/3 space-y-6">
+          {/* Live Video */}
+          <div className="overflow-hidden rounded-2xl shadow-lg border border-orange-100">
             <video
               src={stream.videoSrc}
               autoPlay
@@ -35,41 +45,69 @@ const LiveStreamPage = () => {
             />
           </div>
 
-          {/* Diya + Om */}
-          <div className="flex justify-center mt-4">
-            <div className="text-center">
-              {/* <img src="/assets/diya.png" alt="Diya" className="w-10 mx-auto mb-1" /> */}
-              <div className="text-2xl text-orange-600 font-bold">ॐ</div>
+          {/* Title & Metadata */}
+          <div className="text-center space-y-3">
+            <h2 className="text-3xl font-bold text-orange-700 tracking-wide">{stream.title}</h2>
+
+            <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-800">
+              <div className="flex items-center gap-2">
+                <User size={16} className="text-orange-600" />
+                <span>{stream.pandit}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar size={16} className="text-orange-600" />
+                <span>{stream.date}</span>
+              </div>
+              {stream.isLive && (
+                <div className="flex items-center gap-2">
+                  <Dot className="text-red-600 animate-pulse" />
+                  <span className="text-red-600 font-medium">Live</span>
+                </div>
+              )}
+              <div className="flex items-center gap-2">
+                <Eye size={16} className="text-orange-600" />
+                <span>{stream.views.toLocaleString()} watching</span>
+              </div>
             </div>
           </div>
 
-          {/* Stream Title + Meta */}
-          <h2 className="text-xl md:text-2xl font-semibold text-center mt-4">
-            {stream.title}
-          </h2>
-          <p className="text-center text-sm text-gray-600 mt-1">
-            🏷 Category: {stream.category} &nbsp;&nbsp;•&nbsp;&nbsp; {stream.isLive ? 'Live' : 'Offline'} &nbsp;&nbsp;•&nbsp;&nbsp; {stream.views.toLocaleString()} watching
-          </p>
+          {/* Temple Info Box */}
+          <div className="bg-[#fff3e0] border border-orange-200 rounded-xl p-5 shadow-sm text-center max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <MapPin size={18} className="text-orange-700" />
+              <p className="text-lg font-semibold text-orange-700">
+                {stream.location}
+              </p>
+            </div>
+            <p className="text-sm text-gray-800 leading-relaxed">
+              Sacred live ceremony streamed directly from one of the holiest temples in India.
+              Experience divine blessings and Vedic rituals from the spiritual city of Varanasi.
+            </p>
+          </div>
 
-          {/* Actions */}
-          <div className="flex justify-center gap-4 mt-6">
+          {/* Call-To-Actions */}
+          <div className="flex flex-wrap justify-center gap-4 pt-6">
             <Link
               to=""
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full shadow-md"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full shadow-md flex items-center gap-2 transition"
             >
-              🪔 Make a Donation
+              <Gift size={18} />
+              Make a Donation
             </Link>
-            <Link
-              to=""
-              className="flex items-center gap-2 rounded-full px-6 py-2 border-orange-300 text-orange-600 hover:bg-orange-100"
-            >
-              <Share2 size={16} />
+
+            <button className="border border-orange-400 text-orange-700 hover:bg-orange-100 px-6 py-2 rounded-full flex items-center gap-2 transition">
+              <Heart size={18} />
+              Save to Favourites
+            </button>
+
+            <button className="border border-orange-400 text-orange-700 hover:bg-orange-100 px-6 py-2 rounded-full flex items-center gap-2 transition">
+              <Share2 size={18} />
               Share
-            </Link>
+            </button>
           </div>
         </div>
 
-        {/* Recommended Streams */}
+        {/* Right Side: Recommendations */}
         <Recomendation />
       </div>
     </div>
