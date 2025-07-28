@@ -53,7 +53,7 @@ const ChadhavaSelection = () => {
   return (
     <section className="bg-[#fffaf5] px-4 py-10 min-h-screen">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-2xl font-bold text-red-700 mb-2">🪔 Send Sacred Chadhava to Temple</h1>
+        <h1 className="text-2xl font-bold text-red-700 mb-2"> Send Sacred Chadhava to Temple</h1>
         <p className="text-gray-600 mb-6">Support the temple by sending offerings with your puja.</p>
 
         <div className="bg-orange-50 p-4 rounded-lg border border-orange-200 flex justify-between items-center">
