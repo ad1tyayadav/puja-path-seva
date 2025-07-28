@@ -10,14 +10,14 @@ const UserIcon = () => (
   </svg>
 );
 const MenuIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+  </svg>
 );
 const CloseIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
 );
 
 const Navbar = () => {
@@ -30,17 +30,19 @@ const Navbar = () => {
     { path: "/BookPuja", label: "Book Puja" },
     { path: "/live-stream", label: "Live Streaming" },
     { path: "/Chadhava", label: "Chadhava" },
+    { path: "/kundli", label: "Kundli" },
+    { path: "/astro", label: "Astro Teller" },
     { path: "/donations", label: "Donations" },
     { path: "/Notifications", label: "Notifications" },
 
-    
+
   ];
 
 
   // Custom Logo component - styled to match the image
   const Logo = () => (
     <div className="flex items-center">
-        <img src={LogoImg} alt="PujaPathSeva" className="w-20 h-20" />
+<img src={LogoImg} alt="PujaPathSeva" className="w-16 h-16 ml-[-10px]" />
       <div className="text-orange-500 font-cursive pl-2">
         <span className="text-xl font-cursive tracking-wide">PujaPathSeva</span>
       </div>
@@ -49,34 +51,38 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+        <div className="flex-shrink-0 mr-4">
             <Link to="/" onClick={() => navigate('/')} className="flex items-center">
               <Logo />
             </Link>
           </div>
 
           {/* Main Navigation - Desktop */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <div className="hidden md:flex flex-wrap items-center gap-x-4 lg:gap-x-6">
             {mainNavLinks.map(link => (
               (
-                <a key={link.path} href={link.path} className={`${navLinkClasses} font-medium`}>
-                  {link.label}
-                </a>
+               <a
+  key={link.path}
+  href={link.path}
+  className={`${navLinkClasses} font-medium text-sm lg:text-base min-w-max`}
+>
+  {link.label}
+</a>
               )
             ))}
           </div>
 
           {/* User actions - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
+<div className="hidden md:flex items-center space-x-4 ml-6">
             <a href="/Auth" className="text-orange-500 border border-orange-500 rounded-full px-5 py-2 text-sm font-medium hover:bg-orange-500 hover:text-white transition-all duration-300">
               Login/Register
             </a>
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors duration-300">
-            <a href='/Profile'><UserIcon /></a>
-              
+              <a href='/Profile'><UserIcon /></a>
+
             </div>
           </div>
 
@@ -100,7 +106,7 @@ const Navbar = () => {
               </a>
             ))}
             {/* Mobile dropdown items displayed flat */}
-           
+
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="px-5 flex items-center justify-between">

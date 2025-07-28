@@ -18,6 +18,8 @@ import Donations from "./pages/Donations";
 import ChadhavaSelection from "./pages/details/ChadhavaSelection";
 import ChadhavaDetails from "./pages/details/ChadhavaDetails";
 import DonationDetails from "./pages/details/DonationDetails";
+import Kundli from "./pages/Kundli";
+import AstroTellerSection from "./pages/AstroTeller";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/live-stream" element={<LiveStreaming />} />
           <Route path="/BookPuja" element={<BookPuja />} />
           <Route path="/chadhava" element={<Chadava />} />
+          <Route path="/kundli" element={<Kundli />} />
+          <Route path="/astro" element={<AstroTellerSection />} />
           <Route path="/chadhava-details/:id" element={<ChadhavaDetails />} />
           <Route path="/donations" element={<Donations />} />
           <Route path="/donation-details/:id" element={<DonationDetails />} />
