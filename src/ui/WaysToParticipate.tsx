@@ -71,7 +71,7 @@ const WaysToParticipate = () => {
   };
 
   return (
-    <section className="py-10 px-4">
+    <section id="participate" className="py-10 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-2xl font-semibold text-orange-600 mb-6">
           Ways to Participate
